@@ -1,0 +1,579 @@
+/* Portafolio personal - estilos
+   Tema "Arctic Frost": azul acero, azul hielo, plata y blanco.
+   Letra: DejaVu Sans (esta en css/fuentes.css; si no carga, usa Verdana). */
+
+:root {
+  --acero: #4a6fa5;        /* color principal */
+  --acero-oscuro: #3b5a88; /* botones al pasar el mouse */
+  --hielo: #d4e4f7;        /* fondos claros */
+  --hielo-suave: #eef4fb;
+  --plata: #c0c0c0;        /* lineas y bordes */
+  --blanco: #fafafa;       /* fondo de la pagina */
+  --tinta: #1f2d42;        /* texto */
+  --gris: #5f6b7d;         /* texto secundario */
+  --error: #b3261e;
+  --exito: #1d6b45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "DejaVu Sans", Verdana, sans-serif;
+  font-size: 15px;
+  color: var(--tinta);
+  background: var(--blanco);
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--acero);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* textos largos: lineas no tan anchas, pero alineados con lo demas */
+.angosto > * {
+  max-width: 700px;
+}
+
+/* ---------- Encabezado y menu ---------- */
+
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  border-bottom: 1px solid var(--plata);
+}
+
+.encabezado-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  color: var(--acero);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.menu a {
+  margin-left: 22px;
+  color: var(--tinta);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--acero);
+  text-decoration: underline;
+}
+
+.boton-menu {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid var(--acero);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--acero);
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* ---------- Botones ---------- */
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--acero);
+  border-radius: 4px;
+  background: var(--acero);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  border-color: var(--acero-oscuro);
+  background: var(--acero-oscuro);
+}
+
+.boton-borde {
+  background: transparent;
+  color: var(--acero);
+}
+
+.boton-borde:hover {
+  background: var(--hielo-suave);
+  color: var(--acero-oscuro);
+}
+
+/* boton que se ve como enlace (Ver detalles) */
+.enlace {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--acero);
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.enlace:hover {
+  color: var(--acero-oscuro);
+}
+
+/* ---------- Inicio y credencial ---------- */
+
+.inicio {
+  padding: 60px 0;
+  background: var(--hielo);
+}
+
+.inicio-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.inicio-texto {
+  max-width: 480px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  letter-spacing: -0.01em;
+}
+
+.rol {
+  margin: 10px 0 14px;
+  color: var(--acero);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.credencial {
+  flex-shrink: 0;
+  width: 420px;
+  max-width: 100%;
+  border: 1px solid var(--plata);
+  border-radius: 10px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.credencial-titulo {
+  margin: 0;
+  padding: 8px 18px;
+  background: var(--acero);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.credencial-cuerpo {
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+}
+
+.foto {
+  flex-shrink: 0;
+  width: 114px;
+  height: 152px;
+  border: 1px solid var(--plata);
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.credencial dl {
+  margin: 0;
+}
+
+.credencial dt {
+  color: var(--gris);
+  font-size: 0.72rem;
+}
+
+.credencial dd {
+  margin: 0 0 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* ---------- Secciones ---------- */
+
+.seccion {
+  padding: 50px 0;
+  border-top: 1px solid var(--plata);
+  scroll-margin-top: 60px;
+}
+
+.inicio + .seccion {
+  border-top: none;
+}
+
+/* ---------- Sobre mi ---------- */
+
+.entrada {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+#sobre-mi h3 {
+  margin-top: 24px;
+  color: var(--acero);
+}
+
+#sobre-mi h3 + p {
+  margin-top: 6px;
+}
+
+/* ---------- Habilidades ---------- */
+
+.habilidades {
+  margin: 0;
+}
+
+.habilidades div {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--plata);
+}
+
+.habilidades div:first-child {
+  border-top: 1px solid var(--plata);
+}
+
+.habilidades dt {
+  color: var(--acero);
+  font-weight: 700;
+}
+
+.habilidades dd {
+  margin: 0;
+}
+
+/* ---------- Proyectos ---------- */
+
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.proyecto {
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--plata);
+  border-radius: 6px;
+}
+
+.proyecto h3 {
+  margin: 16px 0 6px;
+}
+
+.proyecto p {
+  margin: 0 0 8px;
+}
+
+.tecnologias {
+  color: var(--gris);
+  font-size: 0.85rem;
+}
+
+/* el enlace de detalles queda abajo */
+.proyecto .enlace {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* ---------- Curriculum ---------- */
+
+.franja-cv {
+  padding: 34px 0;
+  background: var(--hielo);
+  scroll-margin-top: 60px;
+}
+
+.franja-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.franja-cv h2 {
+  margin-bottom: 6px;
+}
+
+.franja-cv p {
+  margin: 0;
+}
+
+/* ---------- Contacto ---------- */
+
+.contacto {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 40px;
+}
+
+.nota {
+  margin-top: 0;
+  color: var(--gris);
+  font-size: 0.88rem;
+}
+
+form label {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-top: 5px;
+  padding: 9px 11px;
+  border: 1px solid var(--plata);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--tinta);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--acero);
+  outline: 2px solid var(--hielo);
+}
+
+form .boton {
+  margin-top: 20px;
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.85rem;
+}
+
+.campo-error {
+  border-color: var(--error) !important;
+}
+
+#estado-formulario {
+  font-weight: 700;
+}
+
+.redes h3 {
+  margin-bottom: 12px;
+}
+
+.redes ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.redes li {
+  padding: 10px 0;
+  border-top: 1px solid var(--plata);
+}
+
+.redes span {
+  display: block;
+  color: var(--gris);
+  font-size: 0.78rem;
+}
+
+.redes a {
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Ventanas de detalle ---------- */
+
+.modal {
+  width: 90%;
+  max-width: 580px;
+  padding: 0;
+  border: 1px solid var(--plata);
+  border-radius: 10px;
+  color: var(--tinta);
+}
+
+.modal::backdrop {
+  background: rgba(31, 45, 66, 0.55);
+}
+
+.modal-contenido {
+  padding: 22px;
+}
+
+.modal-contenido img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--plata);
+  border-radius: 6px;
+}
+
+.modal-contenido h3 {
+  margin-top: 16px;
+  font-size: 1.2rem;
+}
+
+.tipo {
+  margin-top: 4px;
+  color: var(--acero);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.sin-repo {
+  color: var(--gris);
+}
+
+/* ---------- Pie de pagina ---------- */
+
+.pie {
+  padding: 18px 0;
+  border-top: 1px solid var(--plata);
+  color: var(--gris);
+  font-size: 0.85rem;
+}
+
+.pie p {
+  margin: 0;
+}
+
+/* ---------- Tablet y celular ---------- */
+
+@media (max-width: 900px) {
+  .inicio-fila {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inicio-texto {
+    max-width: none;
+  }
+
+  .proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .boton-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 6px 20px 12px;
+    background: #ffffff;
+    border-bottom: 1px solid var(--plata);
+  }
+
+  .menu.abierto {
+    display: block;
+  }
+
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .inicio {
+    padding: 36px 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .credencial-cuerpo {
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .foto {
+    width: 96px;
+    height: 128px;
+  }
+
+  .habilidades div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .proyectos,
+  .contacto {
+    grid-template-columns: 1fr;
+  }
+}

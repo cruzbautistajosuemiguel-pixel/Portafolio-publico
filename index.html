@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Josue Miguel Cruz Bautista</title>
+  <link rel="icon" href="img/icono.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fuentes.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- RF02: menu de navegacion -->
+  <header class="encabezado">
+    <div class="contenedor encabezado-fila">
+      <a href="#inicio" class="logo">Josue Cruz</a>
+      <button id="boton-menu" class="boton-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- RF01: nombre, fotografia y datos personales -->
+    <section id="inicio" class="inicio">
+      <div class="contenedor inicio-fila">
+        <div class="inicio-texto">
+          <h1>Josue Miguel Cruz Bautista</h1>
+          <p class="rol">Estudiante de Ingenieria de Software</p>
+          <p>Este es mi portafolio. Aqui puedes ver lo que he aprendido en la carrera y los pocos proyectos que he hecho.</p>
+          <div class="botones">
+            <a href="#proyectos" class="boton">Ver proyectos</a>
+            <a href="docs/cv.pdf" download="CV-Josue-Miguel-Cruz-Bautista.pdf" class="boton boton-borde">Descargar CV</a>
+          </div>
+        </div>
+
+        <!-- credencial con la foto y los datos personales -->
+        <div class="credencial">
+          <p class="credencial-titulo">Datos personales</p>
+          <div class="credencial-cuerpo">
+            <img src="img/foto.jpg" alt="Fotografia de Josue Miguel Cruz Bautista" class="foto" width="114" height="152">
+            <dl>
+              <dt>Nombre</dt>
+              <dd>Josue Miguel Cruz Bautista</dd>
+              <dt>Carrera</dt>
+              <dd>Ingenieria de Software</dd>
+              <dt>Universidad</dt>
+              <dd>Universidad Veracruzana, campus Ixtaczoquitlan</dd>
+              <dt>Semestre</dt>
+              <dd>Tercero</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RF01: descripcion y perfil profesional -->
+    <section id="sobre-mi" class="seccion">
+      <div class="contenedor angosto">
+        <h2>Sobre mi</h2>
+        <p class="entrada">Soy estudiante de tercer semestre de Ingenieria de Software. Estoy aprendiendo desarrollo web y bases de datos, y hago proyectos pequeños para practicar lo que veo en clases. No soy el mejor , pero trto de hacer lo que puedo para sobrevivir la carrera, quiero superarme y centrate en mi para poder ser mejor y cuando me vea al espejo ser mejor que ayer, no solo en la escuela, sino , en la vida , en mi vida, tengo miedos, inseguridades , problemas , como todos los demas , despierto todas las mañanas y aun que no se sepa lo que tengo que hacer pongo un pie delante del otro y trato de tomar las mejores decisiones que puedo, me equivoco muchas veces pero de eso se trata ser un humano y esa es mi mayor fortalesa </p>
+        <h3>Perfil profesional</h3>
+        <p>En la carrera he visto requerimientos, modelado de bases de datos, diagramas UML y prototipos de interfaces. He usado HTML, CSS y JavaScript para paginas web, y PostgreSQL con Docker para bases de datos. Ademas que soy tecnico en Ciencia de Datos e Infromacion, me gustaria seguir aprendiendo y participar en proyectos reales y grandes.</p>
+        <h3>Intereses</h3>
+        <p>Desarrollo web, videojuegos y bases de datos.</p>
+      </div>
+    </section>
+
+    <!-- RF03: habilidades y conocimientos tecnicos -->
+    <section id="habilidades" class="seccion">
+      <div class="contenedor">
+        <h2>Habilidades y conocimientos tecnicos</h2>
+        <dl class="habilidades">
+          <div>
+            <dt>En proceso de desarrollo web</dt>
+            <dd>Un poco de HTML, CSS, JavaScript</dd>
+          </div>
+          <div>
+            <dt>Bases de datos</dt>
+            <dd>SQL,PHPMYADMIN,MySQL, PostgreSQL, Modelo entidad-relacion</dd>
+          </div>
+          <div>
+            <dt>Herramientas</dt>
+            <dd>Docker, Balsamiq, Claude, Iteliji, HTML</dd>
+          </div>
+          <div>
+            <dt>Conocimientos de la carrera</dt>
+            <dd>Un poco de procesos de ingenieria de software, requerimientos funcionales y no funcionales, diagramas UML,Un poco de diseño de Pginas web, analisis de sistemas, matematicas discretas y redes (modelos OSI y TCP/IP)</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- RF04: proyectos -->
+    <section id="proyectos" class="seccion">
+      <div class="contenedor">
+        <h2>Proyectos</h2>
+        <div class="proyectos">
+          <article class="proyecto">
+            <img src="img/proyecto-portafolio.svg" alt="Imagen del proyecto Portafolio personal">
+            <h3>Portafolio personal</h3>
+            <p>Esta pagina. Muestra mi informacion, habilidades y proyectos.</p>
+            <p class="tecnologias">Tecnologias: HTML, CSS, JavaScript</p>
+            <button type="button" class="enlace" data-modal="modal-portafolio">Ver detalles</button>
+          </article>
+
+          <article class="proyecto">
+            <img src="img/hola.png" alt="Imagen del proyecto Base de datos Farmacia Salud Total">
+            <h3>Base de datos Farmacia Salud Total</h3>
+            <p>Practica de base de datos para una farmacia, hecha desde la terminal. Forma parte de una actividad de la materia Bases de Datos</p>
+            <p class="tecnologias">Tecnologias: PostgreSQL, SQL, Docker</p>
+            <button type="button" class="enlace" data-modal="modal-farmacia">Ver detalles</button>
+          </article>
+
+          <article class="proyecto">
+            <img src="img/sahur-nueva.png" alt="Imagen del proyecto Sahur Kitchen">
+            <h3>Sahur Kitchen</h3>
+            <p>Marca y prototipo de baja fidelidad para un restaurante bar ficticio hecho en canva.</p>
+            <p class="tecnologias">Tecnologias:Canva</p>
+            <button type="button" class="enlace" data-modal="modal-sahur">Ver detalles</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RF06: curriculum en PDF -->
+    <section id="curriculum" class="franja-cv">
+      <div class="contenedor franja-fila">
+        <div>
+          <h2>Curriculum</h2>
+          <p>Mi formacion, habilidades y proyectos en una hoja, en formato PDF.</p>
+        </div>
+        <a href="docs/cv.pdf" download="CV-Josue-Miguel-Cruz-Bautista.pdf" class="boton">Descargar curriculum</a>
+      </div>
+    </section>
+
+    <!-- RF08: formulario de contacto y RF07: redes profesionales -->
+    <section id="contacto" class="seccion">
+      <div class="contenedor">
+        <h2>Contacto</h2>
+        <div class="contacto">
+          <form id="formulario" novalidate>
+            <p class="nota">Los campos con * son obligatorios.</p>
+
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre">
+            <small class="error" id="error-nombre"></small>
+
+            <label for="correo">Correo electronico *</label>
+            <input type="email" id="correo" name="correo">
+            <small class="error" id="error-correo"></small>
+
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono">
+            <small class="error" id="error-telefono"></small>
+
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+            <small class="error" id="error-mensaje"></small>
+
+            <button type="submit" class="boton">Enviar mensaje</button>
+            <p id="estado-formulario" role="status"></p>
+          </form>
+
+          <div class="redes">
+            <h3>Redes profesionales</h3>
+            <ul>
+              <li>
+                <span>GitHub</span>
+                <a href="https://github.com/cruzbautistajosuemiguel-pixel" target="_blank" rel="noopener">Ver mis repositorios</a>
+              </li>
+              <li>
+                <span>Correo</span>
+                <a href="mailto:cruzbautistajosuemiguel@gmail.com">cruzbautistajosuemiguel@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>&copy; 2026 Josue Miguel Cruz Bautista</p>
+    </div>
+  </footer>
+
+  <!-- RF05: detalles de cada proyecto -->
+  <dialog id="modal-portafolio" class="modal">
+    <div class="modal-contenido">
+      <img src="img/proyecto-portafolio.svg" alt="">
+      <h3>Portafolio personal</h3>
+      <p class="tipo">Proyecto escolar</p>
+      <p>Pagina sencilla hecha sin frameworks, solo con HTML, CSS y JavaScript. Tiene menu de navegacion, descarga del curriculum en PDF y un formulario de contacto que revisa los campos obligatorios.</p>
+      <p class="tecnologias">Tecnologias: HTML, CSS, JavaScript</p>
+      <div class="botones">
+        <a href="https://github.com/cruzbautistajosuemiguel-pixel/Portafolio" target="_blank" rel="noopener" class="boton">Ver repositorio</a>
+        <button type="button" class="boton boton-borde cerrar">Cerrar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-farmacia" class="modal">
+    <div class="modal-contenido">
+      <img src="img/proyecto-farmacia.svg" alt="">
+      <h3>Base de datos Farmacia Salud Total</h3>
+      <p class="tipo">Practica escolar</p>
+      <p>Use PostgreSQL dentro de un contenedor de Docker en Windows y trabaje todo desde la linea de comandos con psql.</p>
+      <p class="tecnologias">Tecnologias: PostgreSQL, SQL, Docker</p>
+      <p class="sin-repo">Este proyecto no tiene repositorio publico.</p>
+      <div class="botones">
+        <button type="button" class="boton boton-borde cerrar">Cerrar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-sahur" class="modal">
+    <div class="modal-contenido">
+      <img src="img/proyecto-sahur.svg" alt="">
+      <h3>Sahur Kitchen</h3>
+      <p class="tipo">Proyecto escolar</p>
+      <p>Hice el logotipo de la marca y un prototipo de baja fidelidad en Balsamiq aplicando heuristicas de usabilidad. El sistema considera cuatro usuarios: cliente, mesero, cocinero y cajero.</p>
+      <p class="tecnologias">Tecnologias: Balsamiq</p>
+      <p class="sin-repo">Este proyecto no tiene repositorio publico.</p>
+      <div class="botones">
+        <button type="button" class="boton boton-borde cerrar">Cerrar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
